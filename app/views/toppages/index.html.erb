@@ -1,3 +1,6 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% else %>
 <div class="center jumbotron">
   <div class="text-center">
     <h1>My Recipe</h1>
@@ -5,3 +8,4 @@
     <%= link_to '新規会員登録はこちら', signup_path %>
   </div>
 </div>
+<% end %>
