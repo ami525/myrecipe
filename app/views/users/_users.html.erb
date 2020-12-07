@@ -1,0 +1,6 @@
+<% if users.any? %>
+ <% users.each do |user| %>
+ <%= link_to user.name, user_path(user) %>
+ <% end %>
+ <%= paginate users %> <!--何だか確認-->
+<% end %>
