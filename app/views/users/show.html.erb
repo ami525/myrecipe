@@ -1,3 +1,9 @@
 <h1><%= @user.name %></h1>
 
 <a href="#">レシピ一覧</a>
+
+<ul>
+  <% @user.recipe.each do |user_recipe| %>
+    <li><%= link_to user_recipe.title, recipe_url(user_recipe) %></li>
+  <% end %>
+</ul>

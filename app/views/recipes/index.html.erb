@@ -1,0 +1,16 @@
+<div class="text-center">
+  <h1><div class="m-3 border bg-light">みんなのレシピ一覧</div></h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+
+
+　<ul>
+  　<% @recipes.each do |recipe| %>
+    　<li><%= link_to recipe.title, recipe %></li>
+  　<% end %>
+　</ul>
+　
+　</div>
+</div>

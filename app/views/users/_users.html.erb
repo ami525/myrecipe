@@ -1,6 +1,12 @@
-<% if users.any? %>
- <% users.each do |user| %>
- <%= link_to user.name, user_path(user) %>
- <% end %>
- <%= paginate users %> <!--何だか確認-->
-<% end %>
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+
+  <% if users.any? %>
+   <% users.each do |user| %>
+   <li><%= link_to user.name, user_path(user) %></li>
+   <% end %>
+   <%= paginate users %> <!--何だか確認-->
+  <% end %>
+　
+　</div>
+</div>

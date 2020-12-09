@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+
+<h1 class="text-center" ><%= @recipe.title %>のレシピ by <%= link_to @recipe.user.name, user_path(@recipe.user) %></h1>
+
+<table class="table table-striped table-bordered">
+            <tr>
+                <td class="text-center">タイトル</td>
+                <td class="text-center"><%= @recipe.title %></td>
+            </tr>
+            <tr>
+                <td class="text-center">材料</td>
+                <td class="text-center"><%= @recipe.ingredient %></td>
+            </tr>
+            <tr>
+                <td class="text-center">作り方</td>
+                <td class="text-center"><%= @recipe.howto %></td>
+            </tr>
+        </table>
+
+
+<%= link_to '一覧に戻る', recipes_path, class: 'btn btn-info'%>
+<% if current_user == @recipe.user %>
+<%= link_to 'このレシピを編集する', edit_recipe_path(@recipe), class: 'btn btn-light'%>
+<%= link_to 'このレシピを削除する', @recipe, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-dark'%>
+<% end %>
+
+
+
+  </div>
+</div>
