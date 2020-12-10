@@ -7,9 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @users = User.order(id: :desc).page(params[:page]).per(25)
-    @recipes = Recipe.all
-    #@user_recipes = User.recipes.all #.order(id: :desc).page(params[:page])
   end
 
   def new

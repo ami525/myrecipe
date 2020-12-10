@@ -7,7 +7,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
     has_many :recipes   
     
-    #def user_recipes
-        #Recipe.where(user_id: self.recipes_ids)
-    #end
+   
 end
